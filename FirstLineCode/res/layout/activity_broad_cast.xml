@@ -1,0 +1,48 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="com.oneline.fragmentbestpractic.BroadCastActivity" >
+
+        <Button
+            android:id="@+id/tv_broadcast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="广播" />
+
+        <Button
+            android:id="@+id/tv_order_broadcast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="有序广播" />
+
+        <Button
+            android:id="@+id/tv_local_broadcast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="本地广播" />
+
+        <Button
+            android:id="@+id/tv_forced_offline_broadcast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="强制下线广播" />
+
+        <TextView
+            android:id="@+id/tv_jpush"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/et_savefile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入您要保存到文件中的文字" />
+    </LinearLayout>
+
+</ScrollView>
