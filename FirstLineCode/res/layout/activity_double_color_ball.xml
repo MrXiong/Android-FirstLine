@@ -1,0 +1,29 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.oneline.fragmentbestpractic.DoubleColorBallActivity" >
+
+    <Button
+        android:id="@+id/btn_start_sys"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="开始生成系统红球和蓝球"
+         />
+	<include layout="@layout/view_sysball"/>
+    <Button
+        android:id="@+id/btn_start_user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="用户机选红球和蓝球"
+         />
+	<include layout="@layout/view_userball"/>
+    <Button
+        android:id="@+id/btn_win"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="公布中奖结果"
+         />
+
+</LinearLayout>

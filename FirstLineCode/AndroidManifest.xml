@@ -78,12 +78,8 @@
             android:name=".MainActivity"
             android:label="@string/app_name" >
         </activity>
-        <activity
-            android:name="com.oneline.weather.activity.ChooseAreaActivity"
-             />
-        <activity
-            android:name="com.oneline.weather.activity.WeatherActivity"
-             />
+        <activity android:name="com.oneline.weather.activity.ChooseAreaActivity" />
+        <activity android:name="com.oneline.weather.activity.WeatherActivity" />
         <activity
             android:name=".NewsContentActivity"
             android:label="@string/title_activity_news_content" >
@@ -240,6 +236,10 @@
         <activity
             android:name=".SensorActivity"
             android:label="@string/title_activity_sensor" >
+        </activity>
+        <activity
+            android:name=".DoubleColorBallActivity"
+            android:label="@string/title_activity_double_color_ball" >
         </activity>
     </application>
 

@@ -13,6 +13,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.oneline.fragmentbestpractic.R;
+import com.oneline.weather.util.CacheUtils;
 
 public class GalleryAdapter extends
 		RecyclerView.Adapter<GalleryAdapter.ViewHolder> {
@@ -20,6 +21,7 @@ public class GalleryAdapter extends
 	private List<Integer> mData;
 	private LayoutInflater mInflater;
 	private OnItemClickListener mOnItemClickListener;
+	private Context mContext;
 	
 	//ItemClick的回调接口 
 	public interface OnItemClickListener{
@@ -33,6 +35,7 @@ public class GalleryAdapter extends
 	public GalleryAdapter(Context context, List<Integer> data) {
 		this.mData = data;
 		mInflater = LayoutInflater.from(context);
+		this.mContext = context;
 	}
 
 	public static class ViewHolder extends RecyclerView.ViewHolder {
@@ -60,7 +63,9 @@ public class GalleryAdapter extends
 	}
 
 	public void onBindViewHolder(final ViewHolder holder, final int i) {
-		holder.mImg.setImageResource(mData.get(i));
+		CacheUtils cacheUtils = CacheUtils.getInstance(mContext);
+		holder.mImg.setImageBitmap(cacheUtils.decodeSampledBitmapFromResource(mContext.getResources(), mData.get(i), 40, 40));
+		//holder.mImg.setImageResource(mData.get(i));
 		holder.mText.setText("狗狗" + i);
 		if(mOnItemClickListener != null) {
 			holder.itemView.setOnClickListener(new OnClickListener() {
